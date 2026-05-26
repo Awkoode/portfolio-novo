@@ -1,0 +1,21 @@
+/* matematica specific overrides */
+.link-input {
+  width: 100%;
+  background: rgba(255,255,255,0.4);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink);
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+.link-input:focus {
+  border-color: #1d4ed8;
+  background: #fff;
+}
+.activity:nth-child(2)::after { background: linear-gradient(90deg, #06b6d4, #1d4ed8); }
+.activity:nth-child(3)::after { background: linear-gradient(90deg, #1d4ed8, #06b6d4, #1d4ed8); }
+.chip:hover { border-color: #1d4ed8; color: #1d4ed8; }
+.crumb a:hover { color: #1d4ed8; }

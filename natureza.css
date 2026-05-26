@@ -1,0 +1,21 @@
+/* natureza specific overrides */
+.link-input {
+  width: 100%;
+  background: rgba(255,255,255,0.4);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink);
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+.link-input:focus {
+  border-color: #047857;
+  background: #fff;
+}
+.activity:nth-child(2)::after { background: linear-gradient(90deg, #84cc16, #047857); }
+.activity:nth-child(3)::after { background: linear-gradient(90deg, #047857, #84cc16, #047857); }
+.chip:hover { border-color: #047857; color: #047857; }
+.crumb a:hover { color: #047857; }

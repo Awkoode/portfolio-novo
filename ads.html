@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Análise e Desenvolvimento de Sistemas — Portfólio</title>
+<meta name="description" content="Trilha técnica em Análise e Desenvolvimento de Sistemas integrada ao 3º ano do Ensino Médio." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index.css" />
+<link rel="stylesheet" href="ads.css" />
+</head>
+<body class="ads-dark">
+<canvas id="particles"></canvas>
+<div class="dot-grid" aria-hidden="true"></div>
+
+<header class="site-header ads-header" id="header">
+  <a href="index.html" class="brand">Portfólio<span>./tech</span></a>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Menu">[ menu ]</button>
+  <nav class="nav" id="nav">
+    <a href="index.html">~ /</a>
+    <a href="humanas.html">humanas</a>
+    <a href="natureza.html">natureza</a>
+    <a href="matematica.html">matemática</a>
+    <a href="linguagens.html">linguagens</a>
+    <a href="ads.html" class="active">A.D.S.</a>
+  </nav>
+</header>
+
+<main>
+  <section class="ads-hero">
+    <div class="terminal-line reveal">
+      <span class="prompt">visitante@portfolio:~$</span>
+      <span class="cmd">cat trilha-tecnica.md</span>
+    </div>
+    <h1 class="reveal"><span id="typed"></span><span class="caret">_</span></h1>
+    <p class="lead reveal">Estação técnica do portfólio: projetos, experimentos e entregas do curso integrado de Análise e Desenvolvimento de Sistemas. Onde a sala de aula encontra o terminal.</p>
+    <div class="meta-grid reveal">
+      <div><span>stack</span>HTML · CSS · JS · SQL</div>
+      <div><span>foco</span>web · dados · UX</div>
+      <div><span>status</span><i class="dot"></i> ativo</div>
+    </div>
+  </section>
+
+  <section class="page-banner ads-banner">
+    <div class="crumb reveal">// área 05 · técnico integrado</div>
+    <h1 class="reveal">Análise &amp; Desenvolvimento de Sistemas</h1>
+    <p class="reveal">Pensar problemas, modelar soluções, escrever código. Três atividades selecionadas da trilha técnica.</p>
+    <div class="disciplines-row">
+      <span class="chip">Lógica</span>
+      <span class="chip">Banco de Dados</span>
+      <span class="chip">Front-end</span>
+      <span class="chip">Back-end</span>
+      <span class="chip">UX</span>
+    </div>
+  </section>
+
+  <section class="activities ads-activities">
+    <article class="activity reveal">
+      <div class="head"><span>Atividade 01</span><span>Front-end</span></div>
+      <h3>Landing page responsiva</h3>
+      <p>Construção de uma landing page do zero com HTML semântico, CSS moderno (flex/grid) e micro-interações em JS vanilla.</p>
+      <label class="dropzone"><input type="file" /><span data-label>upload · arraste · cole link</span></label>
+      <input type="url" placeholder="https://github.com/usuario/projeto" class="link-input" />
+      <div class="tags"><span class="tag">#html</span><span class="tag">#css</span><span class="tag">#responsivo</span></div>
+    </article>
+
+    <article class="activity reveal">
+      <div class="head"><span>Atividade 02</span><span>Banco de Dados</span></div>
+      <h3>Modelagem ER de uma biblioteca</h3>
+      <p>Diagrama entidade-relacionamento, script SQL de criação e consultas analíticas sobre acervo, empréstimos e usuários.</p>
+      <label class="dropzone"><input type="file" /><span data-label>upload · arraste · cole link</span></label>
+      <input type="url" placeholder="link para .sql ou diagrama" class="link-input" />
+      <div class="tags"><span class="tag">#sql</span><span class="tag">#modelagem</span><span class="tag">#er</span></div>
+    </article>
+
+    <article class="activity reveal">
+      <div class="head"><span>Atividade 03</span><span>UX / Lógica</span></div>
+      <h3>App de hábitos — protótipo</h3>
+      <p>Pesquisa com usuários, fluxo, wireframe e protótipo navegável de um app de acompanhamento de hábitos diários.</p>
+      <label class="dropzone"><input type="file" /><span data-label>upload · arraste · cole link</span></label>
+      <input type="url" placeholder="link Figma / vídeo demo" class="link-input" />
+      <div class="tags"><span class="tag">#figma</span><span class="tag">#ux</span><span class="tag">#prototipo</span></div>
+    </article>
+  </section>
+</main>
+
+<footer class="site-footer ads-footer">
+  <div>© 2026 · ./portfolio --modo=tecnico</div>
+  <div>exit 0</div>
+</footer>
+
+<script src="index.js"></script>
+<script src="ads.js"></script>
+</body>
+</html>
