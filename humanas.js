@@ -67,3 +67,40 @@ document.querySelectorAll('.link-input').forEach((inp) => {
     if (e.key === 'Escape') closeAll();
   });
 })();
+
+// Alternância de Trimestres
+document.addEventListener('DOMContentLoaded', () => {
+  const tabs = document.querySelectorAll('.trimester-tab');
+  const sections = document.querySelectorAll('.trimester-section');
+
+  function setTrimester(trimesterTarget) {
+    // Atualiza o estado dos botões
+    tabs.forEach((tab) => {
+      if (tab.dataset.trimester === trimesterTarget) {
+        tab.classList.add('active');
+      } else {
+        tab.classList.remove('active');
+      }
+    });
+
+    // Atualiza a visibilidade das seções
+    sections.forEach((section) => {
+      if (section.dataset.trimester === trimesterTarget) {
+        section.classList.add('active');
+      } else {
+        section.classList.remove('active');
+      }
+    });
+  }
+
+  // Evento de clique nos botões
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const selectedTrimester = tab.dataset.trimester;
+      setTrimester(selectedTrimester);
+    });
+  });
+
+  // Garante que inicia no 1º Trimestre
+  setTrimester('1');
+});

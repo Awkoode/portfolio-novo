@@ -20,6 +20,61 @@
 .chip:hover { border-color: #c2410c; color: #c2410c; }
 .crumb a:hover { color: #c2410c; }
 
+.trimester-filter {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 0 0.5rem;
+}
+.trimester-buttons {
+  display: inline-flex;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+.trimester-tab {
+  appearance: none;
+  border: 1px solid rgba(38, 38, 38, 0.12);
+  background: rgba(255, 255, 255, 0.75);
+  color: #1a1a1a;
+  padding: 0.85rem 1.1rem;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, color 0.2s, transform 0.2s;
+}
+.trimester-tab:hover {
+  background: #fff;
+  border-color: #c2410c;
+}
+.trimester-tab.active {
+  background: #c2410c;
+  color: #fff;
+  border-color: #c2410c;
+  transform: translateY(-1px);
+}
+
+.trimestre-section {
+  display: none;
+}
+.trimestre-section.active {
+  display: block;
+}
+
+.activities-empty {
+  min-height: 18rem;
+  display: grid;
+  place-items: center;
+  background: rgba(242, 230, 218, 0.7);
+  border: 1px dashed rgba(194, 65, 12, 0.5);
+  border-radius: 14px;
+}
+.placeholder {
+  color: rgba(34, 34, 34, 0.65);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
 /* make each activity take roughly half the viewport height */
 .activities {
   display: flex;
@@ -48,7 +103,7 @@
   background-size: cover;
   background-position: center;
   /* mantém um gradiente de fundo como fallback enquanto a imagem carrega/na ausência dela */
-  background: linear-gradient(135deg,#f59e0b,#c2410c);
+  background: linear-gradient(135deg,#f59f0b00,#c2400c00);
   min-height: 22vh; /* garante altura inicial em telas pequenas */
   display: block;
   overflow: hidden;
@@ -134,4 +189,14 @@
 @media (min-width: 900px) {
   .activities { max-width: 960px; margin: 0 auto; }
   .activity { min-height: 50vh; }
+}
+
+/* Força esconder todas as seções de trimestre */
+.trimester-section {
+  display: none !important;
+}
+
+/* Mostra apenas a seção que tiver a classe .active */
+.trimester-section.active {
+  display: block !important;
 }

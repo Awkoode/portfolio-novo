@@ -37,40 +37,39 @@
     </div>
   </section>
 
-  <section class="activities">
-    <article class="activity reveal">
-  <div class="head"><span>Atividade 01</span><span>Cálculo</span></div>
-  <h3>Limites e derivadas: uma introdução visual</h3>
-  <p>Caderno com construções no GeoGebra mostrando a passagem da secante à tangente em funções polinomiais.</p>
-  <label class="dropzone">
-    <input type="file" />
-    <span data-label>arraste arquivo · clique · ou cole link</span>
-  </label>
-  <input type="url" placeholder="cole um link aqui (drive, github, youtube...)" class="link-input" />
-  <div class="tags"><span class="tag">#GeoGebra</span><span class="tag">#caderno</span><span class="tag">#visual</span></div>
-</article>
-    <article class="activity reveal">
-  <div class="head"><span>Atividade 02</span><span>Geometria</span></div>
-  <h3>Sólidos de revolução em 3D</h3>
-  <p>Modelagem de sólidos a partir de funções, com cálculo de volume e impressão 3D do resultado.</p>
-  <label class="dropzone">
-    <input type="file" />
-    <span data-label>arraste arquivo · clique · ou cole link</span>
-  </label>
-  <input type="url" placeholder="cole um link aqui (drive, github, youtube...)" class="link-input" />
-  <div class="tags"><span class="tag">#3D</span><span class="tag">#volume</span><span class="tag">#fabricação</span></div>
-</article>
-    <article class="activity reveal">
-  <div class="head"><span>Atividade 03</span><span>Estatística</span></div>
-  <h3>Análise estatística de notas da turma</h3>
-  <p>Coleta anonimizada de dados, medidas de tendência, dispersão e dashboard de visualização.</p>
-  <label class="dropzone">
-    <input type="file" />
-    <span data-label>arraste arquivo · clique · ou cole link</span>
-  </label>
-  <input type="url" placeholder="cole um link aqui (drive, github, youtube...)" class="link-input" />
-  <div class="tags"><span class="tag">#dados</span><span class="tag">#dashboard</span><span class="tag">#inferência</span></div>
-</article>
+  <section class="trimester-filter reveal">
+    <div class="trimester-buttons">
+      <button type="button" class="trimester-tab active" data-trimester="1">1º Trimestre</button>
+      <button type="button" class="trimester-tab" data-trimester="2">2º Trimestre</button>
+      <button type="button" class="trimester-tab" data-trimester="3">3º Trimestre</button>
+    </div>
+  </section>
+
+  <section class="trimestre reveal trimester-section active" data-trimester="1">
+    <div class="activities">
+      
+      <article class="activity reveal">
+        <div class="image" aria-hidden="true">
+          <img src="ATVHMNS.png" alt="Jornal Histórico — imagem da atividade" />
+        </div>
+        <div class="content">
+          <h3>Jornal Histórico</h3>
+          <p>A atividade consiste na criação da capa de um jornal inspirado no início do século XX...</p>
+          <button class="open-popup" aria-expanded="false">Habilidades</button>
+          <div class="popup" role="dialog" aria-hidden="true">
+            <div class="popup-body">
+  </section>
+
+  <section class="trimestre reveal trimester-section" data-trimester="2">
+    <div class="activities activities-empty">
+      <p class="placeholder">Nenhuma atividade cadastrada ainda para este trimestre.</p>
+    </div>
+  </section>
+
+  <section class="trimestre reveal trimester-section" data-trimester="3">
+    <div class="activities activities-empty">
+      <p class="placeholder">Nenhuma atividade cadastrada ainda para este trimestre.</p>
+    </div>
   </section>
 </main>
 
