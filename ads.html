@@ -7,7 +7,7 @@
 <meta name="description" content="Trilha técnica em Análise e Desenvolvimento de Sistemas integrada ao 3º ano do Ensino Médio." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="index.css" />
 <link rel="stylesheet" href="ads.css" />
 </head>
@@ -16,7 +16,7 @@
 <div class="dot-grid" aria-hidden="true"></div>
 
 <header class="site-header ads-header" id="header">
-  <a href="index.html" class="brand">Portfólio<span>./tech</span></a>
+  <a href="index.html" class="brand"><span class="owner" style="font-family:inherit;opacity:.9">Arthur Wolf</span><span style="color: white;">.\Tech</span></a>
   <button class="nav-toggle" id="nav-toggle" aria-label="Menu">[ menu ]</button>
   <nav class="nav" id="nav">
     <a href="index.html">~ /</a>
@@ -37,7 +37,7 @@
     <h1 class="reveal"><span id="typed"></span><span class="caret">_</span></h1>
     <p class="lead reveal">Estação técnica do portfólio: projetos, experimentos e entregas do curso integrado de Análise e Desenvolvimento de Sistemas. Onde a sala de aula encontra o terminal.</p>
     <div class="meta-grid reveal">
-      <div><span>stack</span>HTML · CSS · JS · SQL</div>
+      <div><span>stack</span>HTML · CSS · JS</div>
       <div><span>foco</span>web · dados · UX</div>
       <div><span>status</span><i class="dot"></i> ativo</div>
     </div>
@@ -46,7 +46,7 @@
   <section class="page-banner ads-banner">
     <div class="crumb reveal">// área 05 · técnico integrado</div>
     <h1 class="reveal">Análise &amp; Desenvolvimento de Sistemas</h1>
-    <p class="reveal">Pensar problemas, modelar soluções, escrever código. Três atividades selecionadas da trilha técnica.</p>
+    <p class="reveal">Pensar problemas, modelar soluções, escrever código. Uma atividade por disciplina técnica.</p>
     <div class="disciplines-row">
       <span class="chip">Lógica</span>
       <span class="chip">Banco de Dados</span>
@@ -56,34 +56,148 @@
     </div>
   </section>
 
-  <section class="activities ads-activities">
-    <article class="activity reveal">
-      <div class="head"><span>Atividade 01</span><span>Front-end</span></div>
-      <h3>Landing page responsiva</h3>
-      <p>Construção de uma landing page do zero com HTML semântico, CSS moderno (flex/grid) e micro-interações em JS vanilla.</p>
-      <label class="dropzone"><input type="file" /><span data-label>upload · arraste · cole link</span></label>
-      <input type="url" placeholder="https://github.com/usuario/projeto" class="link-input" />
-      <div class="tags"><span class="tag">#html</span><span class="tag">#css</span><span class="tag">#responsivo</span></div>
-    </article>
-
-    <article class="activity reveal">
-      <div class="head"><span>Atividade 02</span><span>Banco de Dados</span></div>
-      <h3>Modelagem ER de uma biblioteca</h3>
-      <p>Diagrama entidade-relacionamento, script SQL de criação e consultas analíticas sobre acervo, empréstimos e usuários.</p>
-      <label class="dropzone"><input type="file" /><span data-label>upload · arraste · cole link</span></label>
-      <input type="url" placeholder="link para .sql ou diagrama" class="link-input" />
-      <div class="tags"><span class="tag">#sql</span><span class="tag">#modelagem</span><span class="tag">#er</span></div>
-    </article>
-
-    <article class="activity reveal">
-      <div class="head"><span>Atividade 03</span><span>UX / Lógica</span></div>
-      <h3>App de hábitos — protótipo</h3>
-      <p>Pesquisa com usuários, fluxo, wireframe e protótipo navegável de um app de acompanhamento de hábitos diários.</p>
-      <label class="dropzone"><input type="file" /><span data-label>upload · arraste · cole link</span></label>
-      <input type="url" placeholder="link Figma / vídeo demo" class="link-input" />
-      <div class="tags"><span class="tag">#figma</span><span class="tag">#ux</span><span class="tag">#prototipo</span></div>
-    </article>
+  <section class="area-filter reveal">
+    <div class="area-buttons">
+      <button type="button" class="area-tab" data-area="iot">IoT</button>
+      <button type="button" class="area-tab" data-area="banco">Banco de Dados</button>
+      <button type="button" class="area-tab active" data-area="desenvolvimento">Desenvolvimento de Sistemas</button>
+    </div>
   </section>
+
+  <div class="ads-workspace">
+
+    <!-- IoT -->
+    <section class="area-section" data-area="iot">
+      <article class="activity reveal">
+        <div class="content">
+          <div class="head"><span>01 / IoT</span><span class="tag">em breve</span></div>
+          <h3>Sensores e Automação Residencial</h3>
+          <p>Projeto de monitoramento com microcontrolador, sensores de temperatura e umidade, e dashboard para visualização dos dados em tempo real.</p>
+          <div class="tags">
+            <span class="tag">Arduino</span>
+            <span class="tag">Sensores</span>
+            <span class="tag">MQTT</span>
+          </div>
+          <button class="open-popup" aria-expanded="false">Habilidades</button>
+          <div class="popup" role="dialog" aria-hidden="true">
+            <div class="popup-body">
+              <p>Competências técnicas em IoT — a definir</p>
+              <button class="close-popup">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Banco de Dados -->
+    <section class="area-section" data-area="banco">
+      <article class="activity reveal">
+        <div class="content">
+          <div class="head"><span>02 / Banco de Dados</span><span class="tag">em breve</span></div>
+          <h3>Modelagem e Consultas SQL</h3>
+          <p>Atividade de modelagem relacional, normalização de tabelas e construção de consultas para análise de dados de um sistema de gestão.</p>
+          <div class="tags">
+            <span class="tag">MySQL</span>
+            <span class="tag">ERD</span>
+            <span class="tag">SQL</span>
+          </div>
+          <button class="open-popup" aria-expanded="false">Habilidades</button>
+          <div class="popup" role="dialog" aria-hidden="true">
+            <div class="popup-body">
+              <p>Competências técnicas em BD — a definir</p>
+              <button class="close-popup">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Desenvolvimento de Sistemas — MAPLY -->
+    <section class="area-section active" data-area="desenvolvimento">
+      <article class="activity activity--maply reveal">
+        <div class="maply-preview">
+          <div class="maply-preview__hero">
+            <span class="maply-badge">Plataforma cidadã de mobilidade urbana</span>
+            <h2 class="maply-headline">
+              Cansado do<br>
+              <em>Trânsito</em><br>
+              caótico?
+            </h2>
+            <p class="maply-desc">Reporte buracos, semáforos quebrados e obras abandonadas. Acompanhe o status em tempo real. Pressione a gestão pública.</p>
+            <div class="maply-actions">
+              <a href="https://maply-kaka.onrender.com/" target="_blank"><span class="maply-btn maply-btn--primary">Reportar Agora →</span></a>
+              <a href=""><span class="maply-btn maply-btn--ghost">Ver no Mapa</span></a>
+            </div>
+          </div>
+
+          <div class="hero-map-demo">
+            <div class="hero-map-frame">
+              <div class="hero-map-chrome">
+                <span class="hero-map-place">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+                  <span id="hero-map-place">Centro</span>
+                </span>
+                <span class="hero-map-live">
+                  <span class="hero-map-live-dot"></span>
+                  Ao vivo
+                </span>
+              </div>
+
+              <div class="hero-map-viewport">
+                <div class="hero-map-surface" id="hero-map-surface">
+                  <svg class="hero-map-roads" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+                    <path d="M0 150 Q100 80 200 150 T400 140" fill="none" stroke="currentColor" stroke-width="4"/>
+                    <path d="M40 0 Q120 200 200 120 T360 300" fill="none" stroke="currentColor" stroke-width="3" opacity=".55"/>
+                    <path d="M0 220 H400" fill="none" stroke="currentColor" stroke-width="3" opacity=".4"/>
+                    <path d="M180 0 V300" fill="none" stroke="currentColor" stroke-width="3" opacity=".35"/>
+                  </svg>
+                  <span class="hero-map-pin" id="hero-map-pin"></span>
+                </div>
+
+                <div class="hero-map-cards">
+                  <article class="hero-map-card is-active" data-scene="0">
+                    <span class="hero-map-card-sev alta">Alta</span>
+                    <strong>Buraco na via</strong>
+                    <span>Centro — Av. Beira-Mar</span>
+                  </article>
+                  <article class="hero-map-card" data-scene="1">
+                    <span class="hero-map-card-sev media">Média</span>
+                    <strong>Semáforo quebrado</strong>
+                    <span>Trindade — Rua Lauro Linhares</span>
+                  </article>
+                  <article class="hero-map-card" data-scene="2">
+                    <span class="hero-map-card-sev alta">Alta</span>
+                    <strong>Alagamento</strong>
+                    <span>Lagoa da Conceição</span>
+                  </article>
+                  <article class="hero-map-card" data-scene="3">
+                    <span class="hero-map-card-sev media">Média</span>
+                    <strong>Obra sem sinalização</strong>
+                    <span>Ingleses — BR-101</span>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="maply-card-footer">
+          <div class="maply-logo"><span class="maply-dot"></span> MAPLY</div>
+          <p class="maply-footer-desc">App web para reportar e acompanhar problemas de mobilidade urbana em Florianópolis — front-end, UX e integração com mapa interativo.</p>
+          <div class="maply-footer-actions">
+            <button class="open-popup" aria-expanded="false">Habilidades</button>
+            <div class="popup" role="dialog" aria-hidden="true">
+              <div class="popup-body">
+                <p>Front-end · UX/UI · JavaScript · APIs · Trabalho em equipe</p>
+                <button class="close-popup">Fechar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+  </div>
 </main>
 
 <footer class="site-footer ads-footer">

@@ -99,12 +99,12 @@
 }
 .trimester-tab:hover {
   background: #fff;
-  border-color: #c2410c;
+  border-color: #047857;
 }
 .trimester-tab.active {
-  background: #c2410c;
+  background: #047857;
   color: #fff;
-  border-color: #c2410c;
+  border-color: #047857;
   transform: translateY(-1px);
 }
 
