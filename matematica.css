@@ -148,6 +148,7 @@
   overflow: visible;
   min-height: 50vh;
   box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  margin: 0 1rem;
 }
 
 /* image area occupies the larger top portion */

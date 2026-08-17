@@ -17,10 +17,11 @@
 
   // Staggered fadeUp reveal
   const items = document.querySelectorAll('.reveal');
+  const itemsArray = Array.from(items);
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e, i) => {
       if (e.isIntersecting) {
-        const idx = Array.from(items).indexOf(e.target);
+        const idx = itemsArray.indexOf(e.target);
         e.target.style.transitionDelay = (Math.min(idx, 8) * 80) + 'ms';
         e.target.classList.add('in');
         io.unobserve(e.target);
