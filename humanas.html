@@ -10,10 +10,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="index.css" />
 <link rel="stylesheet" href="humanas.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
-<body style="--banner-gradient:linear-gradient(135deg,#c2410c,#f59e0b);">
+<body style="--banner-gradient:linear-gradient(135deg,#c2410c,#f59e0b); --accent:#c2410c; --accent-2:#f59e0b;">
 <header class="site-header" id="header">
-  <a href="index.html" class="brand"><span class="owner" style="font-family:inherit;opacity:.9">Arthur Wolf</span><span>3aº ano EM</span></a>
+  <a href="index.html" class="brand"><span class="owner" style="font-family:inherit;opacity:.9">Arthur Wolf</span><span>3º ano EM</span></a>
   <button class="nav-toggle" id="nav-toggle" aria-label="Menu">[ menu ]</button>
   <nav class="nav" id="nav">
     <a href="index.html">início</a>
@@ -27,6 +28,7 @@
 
 <main>
   <section class="page-banner">
+    <div id="globe-container" aria-hidden="true"></div>
     <div class="crumb reveal"><a href="index.html">início</a> / área 1</div>
     <h1 class="reveal">Ciências Humanas e suas Tecnologias</h1>
     <p class="reveal">Investigar pessoas, territórios, sistemas e ideias que moldam o mundo.</p>
@@ -51,11 +53,11 @@
       
       <article class="activity reveal">
         <div class="image" aria-hidden="true">
-          <img src="ATVHMNS.png" alt="Jornal HistÃ³rico â€” imagem da atividade" />
+          <img src="ATVHMNS.png" alt="Jornal Histórico — imagem da atividade" />
         </div>
         <div class="content">
-          <h3>Jornal HistÃ³rico</h3>
-          <p>A atividade consiste na criaÃ§Ã£o da capa de um jornal inspirado no inÃ­cio do sÃ©culo XX...</p>
+          <h3>Jornal Histórico</h3>
+          <p>A atividade consiste na criação da capa de um jornal inspirado no início do século XX...</p>
           <button class="open-popup" aria-expanded="false">Habilidades</button>
           <div class="popup" role="dialog" aria-hidden="true">
             <div class="popup-body">
@@ -68,11 +70,11 @@
 
       <article class="activity reveal">
         <div class="image" aria-hidden="true">
-          <img src="ATVHMNS2.png" alt="Neocolonialismo â€” imagem da atividade" />
+          <img src="ATVHMNS2.png" alt="Neocolonialismo — imagem da atividade" />
         </div>
         <div class="content">
           <h3>Neocolonialismo</h3>
-          <p>A atividade relaciona a Segunda RevoluÃ§Ã£o Industrial ao imperialismo...</p>
+          <p>A atividade relaciona a Segunda Revolução Industrial ao imperialismo...</p>
           <button class="open-popup" aria-expanded="false">Habilidades</button>
           <div class="popup" role="dialog" aria-hidden="true">
             <div class="popup-body">
@@ -113,15 +115,17 @@
       
       <article class="activity reveal">
         <div class="image" aria-hidden="true">
-          <img src="ATVHMNS2.png" alt="Atividade do 2Âº Trimestre" />
+          <iframe src="https://gamma.app/embed/45jj3w69pa2l63c" style="width: 100%; max-width: 100%; height: 450px" allow="fullscreen" title="Desigualdade Social: Raízes, Realidades e Responsabilidades"></iframe>
         </div>
         <div class="content">
-          <h3>TÃ­tulo da Atividade (2Âº Tri)</h3>
-          <p>DescriÃ§Ã£o da atividade realizada durante o segundo trimestre...</p>
+          <h3>Sociedade e Política</h3>
+          <p>Montamos uma apresentação oral sobre um tema de sociedade e política, adotando uma postura crítica e usando suporte visual de quatro slides. Relacionamos o assunto às habilidades do trabalho, analisando a formação, o papel e a evolução das instituições e políticas públicas.</p>
           <button class="open-popup" aria-expanded="false">Habilidades</button>
           <div class="popup" role="dialog" aria-hidden="true">
             <div class="popup-body">
-              <p>C4 - H21, H22</p>
+              <p>H30 – Analisar as lutas sociais e conquistas obtidas no que se refere às mudanças nas legislações ou nas políticas  públicas. <br>
+H39 – Relacionar o papel das instituições sociais às soluções para problemas políticos, econômicos, sociais e  ambientais no contexto da sociedade brasileira e do mundo. <br>
+H40 – Analisar o processo de formação das instituições sociais e políticas, compreendendo seu papel na sociedade.</p>
               <button class="close-popup">Fechar</button>
             </div>
           </div>
@@ -134,15 +138,18 @@
       
       <article class="activity reveal">
         <div class="image" aria-hidden="true">
-          <img src="ATVHMNS2.png" alt="Atividade do 2Âº Trimestre" />
+          <iframe class="aifreime" src="https://drive.google.com/file/d/14M2gHSkrc0W0uDiYt8X7sPh9VCQZYQCf/preview"></iframe>
         </div>
         <div class="content">
-          <h3>TÃ­tulo da Atividade (2Âº Tri)</h3>
-          <p>DescriÃ§Ã£o da atividade realizada durante o segundo trimestre...</p>
+          <h3>Holocausto e Desumanização</h3>
+          <p>Analisamos o conceito de desumanização de Primo Levi em É Isto um Homem? e o aplicamos à realidade de um grupo marginalizado contemporâneo. A partir disso, realizamos uma pesquisa documental com dados estatísticos e fontes acadêmicas para mapear o preconceito e a perda de dignidade sofridos por esse grupo.</p>
           <button class="open-popup" aria-expanded="false">Habilidades</button>
           <div class="popup" role="dialog" aria-hidden="true">
             <div class="popup-body">
-              <p>C4 - H21, H22</p>
+              <p>H27 - Analisar hipóteses e questões ambientais, sociais, econômicas, políticas e culturais, a partir de leituras e debates. <br>
+H26 - Comparar pontos de vista e ações sobre práticas do indivíduo ou grupo social em diferentes contextos <br>
+H22 - Analisar, na perspectiva humana e social, as principais características e dinâmicas dos fluxos da sociedade. <br>
+H10 - Compreender as transformações no mundo do trabalho, geradas por mudanças na ordem econômica.</p>
               <button class="close-popup">Fechar</button>
             </div>
           </div>
@@ -155,15 +162,18 @@
       
       <article class="activity reveal">
         <div class="image" aria-hidden="true">
-          <img src="ATVHMNS2.png" alt="Atividade do 2Âº Trimestre" />
+          <iframe class="aifreime" src="https://drive.google.com/file/d/1tTYhK5udMabfnA50Gk5mvT2KG2y5Ce_U/preview"></iframe>
         </div>
         <div class="content">
-          <h3>TÃ­tulo da Atividade (2Âº Tri)</h3>
-          <p>DescriÃ§Ã£o da atividade realizada durante o segundo trimestre...</p>
+          <h3>Dossiê Histórico</h3>
+          <p>Nós produzimos um Dossiê Histórico sobre um tema da Segunda Guerra Mundial, analisando seu contexto, líderes e consequências. Além da pesquisa, selecionamos uma fonte primária da época (como fotos ou discursos) e preenchemos uma ficha de análise crítica.</p>
           <button class="open-popup" aria-expanded="false">Habilidades</button>
           <div class="popup" role="dialog" aria-hidden="true">
             <div class="popup-body">
-              <p>C4 - H21, H22</p>
+              <p>H27 - Analisar hipóteses e questões ambientais, sociais, econômicas, políticas e culturais, a partir de leituras e debates. <br>
+H26 - Comparar pontos de vista e ações sobre práticas do indivíduo ou grupo social em diferentes contextos <br>
+H22 - Analisar, na perspectiva humana e social, as principais características e dinâmicas dos fluxos da sociedade. <br>
+H10 - Compreender as transformações no mundo do trabalho, geradas por mudanças na ordem econômica.</p>
               <button class="close-popup">Fechar</button>
             </div>
           </div>
@@ -174,35 +184,19 @@
   </section>
 
   <section class="trimestre reveal trimester-section" data-trimester="3">
-    <div class="activities">
-      
-      <article class="activity reveal">
-        <div class="image" aria-hidden="true">
-          <img src="ATVHMNS.png" alt="Atividade do 3Âº Trimestre" />
-        </div>
-        <div class="content">
-          <h3>TÃ­tulo da Atividade (3Âº Tri)</h3>
-          <p>DescriÃ§Ã£o da atividade realizada durante o terceiro trimestre...</p>
-          <button class="open-popup" aria-expanded="false">Habilidades</button>
-          <div class="popup" role="dialog" aria-hidden="true">
-            <div class="popup-body">
-              <p>C5 - H28, H30</p>
-              <button class="close-popup">Fechar</button>
-            </div>
-          </div>
-        </div>
-      </article>
-
+    <h1 style="padding: 100px;" align="center">3º Trimestre - Em produção...</h1>
+    <div class="activities activities-empty">
+      <p class="placeholder">Nenhuma atividade cadastrada ainda para este trimestre.</p>
     </div>
   </section>
 </main>
 
 <footer class="site-footer">
-  <div>Â© 2026 Â· PortfÃ³lio acadÃªmico</div>
-  <div>Ã¡rea Â· humanas</div>
+  <div>© 2026 · Portfólio acadêmico</div>
+  <div>área · humanas</div>
 </footer>
 
 <script src="index.js"></script>
-<script src="humanas.js"></script>
+<script src="shared.js"></script>
 </body>
 </html>

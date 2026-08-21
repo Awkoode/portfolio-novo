@@ -278,3 +278,18 @@ document.addEventListener('DOMContentLoaded', () => {
     init();
   }
 })();
+
+// Galeria lateral — IoT
+document.querySelectorAll('.activity--gallery').forEach((card) => {
+  const frame = card.querySelector('iframe.gallery-frame');
+  const btns = card.querySelectorAll('.gallery-btn');
+  if (!frame || !btns.length) return;
+
+  btns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      btns.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+      frame.src = btn.dataset.src;
+    });
+  });
+});

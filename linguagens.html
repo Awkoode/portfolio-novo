@@ -10,8 +10,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="index.css" />
 <link rel="stylesheet" href="linguagens.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
-<body style="--banner-gradient:linear-gradient(135deg,#be185d,#f472b6);">
+<body style="--banner-gradient:linear-gradient(135deg,#be185d,#f472b6); --accent:#be185d; --accent-2:#f472b6;">
 <header class="site-header" id="header">
   <a href="index.html" class="brand"><span class="owner" style="font-family:inherit;opacity:.9">Arthur Wolf</span><span>3º ano EM</span></a>
   <button class="nav-toggle" id="nav-toggle" aria-label="Menu">[ menu ]</button>
@@ -27,6 +28,7 @@
 
 <main>
   <section class="page-banner">
+    <div id="globe-container" aria-hidden="true"></div>
     <div class="crumb reveal"><a href="index.html">início</a> / área 4</div>
     <h1 class="reveal">Linguagens e suas Tecnologias</h1>
     <p class="reveal">Ler o mundo, narrar experiências e traduzir sensibilidades entre códigos.</p>
@@ -160,6 +162,7 @@ O trabalho exige a escrita do texto em inglês, o uso do Simple Past e a inclus�
   </section>
 
   <section class="trimestre reveal trimester-section" data-trimester="3">
+    <h1 style="padding: 100px;" align="center">3º Trimestre - Em produção...</h1>
     <div class="activities">
       <div class="activities-empty">
         <p class="placeholder">Nenhuma atividade cadastrada ainda para este trimestre.</p>

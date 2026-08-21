@@ -25,6 +25,10 @@
   --matematica-2: #06b6d4;
   --linguagens-1: #be185d;
   --linguagens-2: #f472b6;
+
+  /* Accent controlado pelo trocador de cor */
+  --accent: #c2410c;
+  --accent-2: #f59e0b;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -261,6 +265,8 @@ main { padding-top: 90px; }
 
 /* ===== Page banner (area pages) ===== */
 .page-banner {
+  position: relative; /* ancora o globo */
+  overflow: hidden; /* recorta o globo que sai pela lateral */
   padding: 60px 6vw 40px;
   border-bottom: 1px solid var(--line);
 }
@@ -412,7 +418,7 @@ main { padding-top: 90px; }
   transform: translateY(-50%);
   width: 900px;
   height: 900px;
-  z-index: 0; /* Posicionado atrás do conteúdo */
+  z-index: -1; /* Posicionado atrás do conteúdo */
   pointer-events: none; /* Garante que cliques atravessem o canvas */
   opacity: 1;
 }
@@ -422,6 +428,22 @@ main { padding-top: 90px; }
   width: 100% !important;
   height: 100% !important;
   display: block;
+}
+
+/* Globo nas páginas de área (dentro do banner) */
+.page-banner #globe-container {
+  width: 680px;
+  height: 680px;
+  right: -220px;
+}
+
+@media (max-width: 768px) {
+  .page-banner #globe-container {
+    width: 420px;
+    height: 420px;
+    right: -160px;
+    opacity: 0.75;
+  }
 }
 
 /* Conteúdo de demonstração da Hero */
@@ -462,26 +484,143 @@ main { padding-top: 90px; }
     right: -300px;
     width: 550px;
     height: 550px;
-    opacity: 0.6; /* Leve redução de opacidade em telas mobile */
+    opacity: 0.75; /* Leve redução de opacidade em telas mobile */
   }
   
   .hero-content h1 {
     font-size: 2.5rem;
   }
 }
-#globe-container {
-  position: absolute;
-  top: 50%;
-  right: -250px;
-  transform: translateY(-50%);
-  width: 900px;
-  height: 900px;
-  z-index: 0;
-  pointer-events: none;
+/* ===== Contact ===== */
+.contact { padding: 20px 6vw 140px; }
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 28px;
+  border-radius: var(--radius);
+  background: var(--glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.4s cubic-bezier(.2,.7,.2,1), box-shadow 0.4s, border-color 0.4s;
+}
+.contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent);
+}
+.contact-icon {
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  color: var(--accent);
+}
+.contact-icon svg { width: 100%; height: 100%; }
+.contact-card strong {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: 500;
+}
+.contact-card .handle {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.6;
+  word-break: break-all;
+}
+@media (max-width: 980px) { .contact-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 540px) { .contact-grid { grid-template-columns: 1fr; } }
+
+/* ===== Theme controls (header) ===== */
+.site-header .nav { margin-left: auto; }
+.theme-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 22px;
+  position: relative;
+  z-index: 110;
+}
+.theme-toggle {
+  appearance: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--glass);
+  color: var(--ink);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: border-color 0.2s, transform 0.2s, background 0.2s;
+}
+.theme-toggle:hover { border-color: var(--ink); transform: translateY(-1px); }
+.theme-toggle svg { width: 16px; height: 16px; }
+.theme-toggle .icon-sun { display: none; }
+body.dark .theme-toggle .icon-sun { display: block; }
+body.dark .theme-toggle .icon-moon { display: none; }
+@media (max-width: 880px) {
+  .nav-toggle { order: 3; }
+  .theme-controls { order: 2; margin-left: auto; margin-right: 16px; }
 }
 
-#globe-container canvas {
-  width: 100% !important;
-  height: 100% !important;
-  display: block;
+/* ===== Accent overrides (cor de destaque de cada página) ===== */
+body .trimester-tab:hover { border-color: var(--accent); }
+body .trimester-tab.active { background: var(--accent); border-color: var(--accent); }
+body .chip:hover { border-color: var(--accent); color: var(--accent); }
+body .crumb a:hover { color: var(--accent); }
+body .link-input:focus { border-color: var(--accent); }
+body .open-popup[aria-expanded="true"] { border-color: var(--accent); }
+body .activity--gallery .gallery-btn.active { background: var(--accent); border-color: var(--accent); box-shadow: 0 6px 16px rgba(0,0,0,0.25); }
+
+/* ===== Dark mode ===== */
+body.dark {
+  --bg: #131313;
+  --bg-soft: #1b1b1b;
+  --ink: #f1ede4;
+  --ink-soft: #cfcbc2;
+  --muted: #98938a;
+  --line: rgba(255, 255, 255, 0.14);
+  --glass: rgba(255, 255, 255, 0.05);
+  --glass-strong: rgba(28, 28, 28, 0.85);
 }
+body.dark .site-header { background: rgba(19, 19, 19, 0.65); }
+body.dark .site-header.scrolled { background: rgba(19, 19, 19, 0.85); }
+body.dark .nav { background: rgba(19, 19, 19, 0.97); }
+body.dark .activity { background: var(--glass-strong); }
+body.dark .activity .content {
+  background: linear-gradient(180deg, rgba(34, 34, 34, 0.92), rgba(24, 24, 24, 1));
+}
+body.dark .activity .image,
+body.dark .activity--gallery .image { background: #1d1d1d; }
+body.dark .activity .popup .popup-body { background: #202024; }
+body.dark .activity .popup .close-popup { color: var(--muted); }
+body.dark .trimester-tab { background: var(--glass); color: var(--ink); }
+body.dark .trimester-tab:hover { background: rgba(255, 255, 255, 0.09); }
+body.dark .activities-empty { background: rgba(255, 255, 255, 0.03); }
+body.dark .placeholder { color: var(--muted); }
+body.dark .link-input { background: var(--glass); }
+body.dark .link-input:focus { background: rgba(255, 255, 255, 0.07); }
+body.dark .dropzone:hover { background: rgba(255, 255, 255, 0.06); }
+body.dark .tag { background: rgba(255, 255, 255, 0.06); }
+body.dark .open-popup { background: var(--glass); color: var(--ink); }
+
+/* Aba ativa mantém a cor de destaque no escuro */
+body.dark .trimester-tab.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+/* Textos dos cards de atividade em branco no escuro */
+body.dark .activity h3 { color: #ffffff; }
+body.dark .activity p { color: rgba(255, 255, 255, 0.85); }

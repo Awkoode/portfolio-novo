@@ -62,7 +62,7 @@ function createBackgroundGlobe(containerId, customConfig = {}) {
   }
 
   const CONFIG = {
-    opacity: 0.08,
+    opacity: 0.75,
     color: "#4d4d4d",
     glowColor: "#ffffff",
     lineWidth: 1,
@@ -158,3 +158,53 @@ function createBackgroundGlobe(containerId, customConfig = {}) {
     }
   };
 }
+
+// Inicializa o globo de fundo em qualquer página que tenha o container
+(function () {
+  if (document.getElementById('globe-container') && typeof THREE !== 'undefined') {
+    createBackgroundGlobe('globe-container');
+  }
+})();
+
+// Tema claro/escuro
+(function () {
+  const body = document.body;
+  const header = document.getElementById('header');
+  if (!header || document.getElementById('theme-toggle')) return;
+
+  // Página A.D.S. tem tema único (dark de fábrica) — sem alternador
+  if (body.classList.contains('ads-dark')) return;
+
+  const store = {
+    get: (k) => { try { return localStorage.getItem(k); } catch (e) { return null; } },
+    set: (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} }
+  };
+
+  // Monta o botão de tema e adiciona ao header
+  const controls = document.createElement('div');
+  controls.className = 'theme-controls';
+  controls.innerHTML =
+    '<button type="button" class="theme-toggle" id="theme-toggle" aria-label="Alternar tema claro/escuro">' +
+    '<svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>' +
+    '<svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>' +
+    '</button>';
+  header.appendChild(controls);
+
+  const toggle = document.getElementById('theme-toggle');
+
+  const applyTheme = (dark) => {
+    body.classList.toggle('dark', dark);
+    if (toggle) toggle.setAttribute('aria-pressed', String(dark));
+  };
+
+  // Restaura preferência salva
+  applyTheme(store.get('pw-theme') === 'dark');
+
+  if (toggle) {
+    toggle.addEventListener('click', () => {
+      const dark = !body.classList.contains('dark');
+      applyTheme(dark);
+      store.set('pw-theme', dark ? 'dark' : 'light');
+    });
+  }
+})();

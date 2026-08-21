@@ -1,4 +1,4 @@
-// natureza.js — interações específicas da área
+// shared.js — lógica comum às páginas de área (popups, trimestres, galeria)
 document.querySelectorAll('.link-input').forEach((inp) => {
   inp.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
@@ -12,7 +12,7 @@ document.querySelectorAll('.link-input').forEach((inp) => {
   });
 });
 
-// new: popup open/close logic
+// popup open/close logic
 (function () {
   const activities = document.querySelectorAll('.activity');
 
@@ -74,7 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const sections = document.querySelectorAll('.trimester-section');
 
   function setTrimester(trimesterTarget) {
-    // Atualiza o estado dos botões
     tabs.forEach((tab) => {
       if (tab.dataset.trimester === trimesterTarget) {
         tab.classList.add('active');
@@ -83,7 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Atualiza a visibilidade das seções
     sections.forEach((section) => {
       if (section.dataset.trimester === trimesterTarget) {
         section.classList.add('active');
@@ -93,7 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Evento de clique nos botões
   tabs.forEach((tab) => {
     tab.addEventListener('click', () => {
       const selectedTrimester = tab.dataset.trimester;
@@ -101,11 +98,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Garante que inicia no 1º Trimestre
   setTrimester('1');
 });
 
-// Galeria lateral — Eletroquímica Aplicada
+// Galeria lateral
 document.querySelectorAll('.activity--gallery').forEach((card) => {
   const frame = card.querySelector('iframe.gallery-frame');
   const btns = card.querySelectorAll('.gallery-btn');
